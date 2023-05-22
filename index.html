@@ -1,23 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel-="stylesheet" href="./assets/StyleSheet.css"/>
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>5 Day Forcast</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/StyleSheet.css">
+
 </head>
+
 <body>
-    <header>
-        <h1></h1>
-        
-    </header>
-    <!-- a place to type in the location where you wants the weather -->
-    <!-- a button to submit the weather to the api/local memory -->
+    <nav class="navbar is-primary is-fixed-top">
+        <div id="one"class="navbar-brand">
+            <div  class="navbar-item is-flex is-align-items-center is-justify-content-flex-end">
+                <h1 class="title is-4"> Whats the Weather</h1>
+            </div>
+        </div>
+    </nav>
 
-    <!-- this is where we are going to want the five day forcast to display -->
-    <!-- each day will have its own box and give the temp, a photo and a chance of rain a and the wind  -->
 
+    <section class="section">
+        <div class="columns">
+            <div class="column is-2">
+                <h2 class="title is-2">City:</h2>
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded has-icons-left">
+                                <input class="input is-large is-link" type="text" placeholder="City" id="city">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-city"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control is-expanded has-icons-left">
+                                <input class="input is-large is-link" type="text" placeholder="State Code" id="state">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-flag-usa"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <p class="control">
+                        <button class="button is-primary is-large is-fullwidth is-hidden" id="search">Search</button>
+                    </p>
+                </div>
+
+                <hr>
+                <div class="buttons is-centered mt-4" id="buttons-container">
+                </div>
+            </div>
+
+
+            <div class="column" id='secondCol'>
+
+                <div class = 'row' id='topHalf'>
+
+                </div>
+
+                <div class = 'row' id='bottomHalf'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
+
 </html>
