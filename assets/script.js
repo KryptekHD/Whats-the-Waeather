@@ -56,7 +56,7 @@ $(function () {
 
 
     function geoLocate() {
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city},${state}&limit=1&appid=c399aac8bfa3d05f4f0807f4c623fc1d`)
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city},${state}&limit=1&appid=c399aac8bfa3d05f4f0807f4c623fc1d`)
             .then(response => response.json())
             .then(function (data) {
 
